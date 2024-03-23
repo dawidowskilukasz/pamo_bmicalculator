@@ -47,3 +47,5 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
+/*Autor: Łukasz Dawidowski s22621*/
