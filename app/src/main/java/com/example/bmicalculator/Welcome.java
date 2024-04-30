@@ -13,15 +13,10 @@ public class Welcome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_screen);
 
-        Button backButton = findViewById(R.id.back_button);
-
         Button bmiCalculatorButton = findViewById(R.id.start_button);
-        bmiCalculatorButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Welcome.this, MenuActivity.class);
-                startActivity(intent);
-            }
+        bmiCalculatorButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Welcome.this, MenuActivity.class);
+            startActivity(intent);
         });
     }
 }

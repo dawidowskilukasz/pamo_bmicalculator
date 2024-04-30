@@ -15,7 +15,6 @@ public class BMI extends AppCompatActivity {
     private EditText HeightNumber;
     private EditText WeightNumber;
     private TextView ResultText;
-    private Button CalculateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,22 +24,12 @@ public class BMI extends AppCompatActivity {
         HeightNumber = findViewById(R.id.HeightNumber);
         WeightNumber = findViewById(R.id.WeightNumber);
         ResultText = findViewById(R.id.ResultText);
-        CalculateButton = findViewById(R.id.CalculateButton);
+        Button calculateButton = findViewById(R.id.CalculateButton);
         Button backButton = findViewById(R.id.back_button);
 
-        CalculateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculateAndDisplayBMI();
-            }
-        });
+        calculateButton.setOnClickListener(v -> calculateAndDisplayBMI());
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void calculateAndDisplayBMI() {

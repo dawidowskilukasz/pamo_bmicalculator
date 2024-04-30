@@ -14,11 +14,8 @@ public class Recipe extends AppCompatActivity {
 
         Button backButton = findViewById(R.id.back_button);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish(); // Close the activity and return to the previous screen
-            }
+        backButton.setOnClickListener(v -> {
+            finish(); // Close the activity and return to the previous screen
         });
     }
 }

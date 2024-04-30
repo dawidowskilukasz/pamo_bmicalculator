@@ -25,7 +25,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.408" />
+        app:layout_constraintVertical_bias="0.408"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/HeightNumber"
@@ -38,7 +39,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.192"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/WeightNumber"
@@ -51,7 +53,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintVertical_bias="0.301"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/HeightText"
@@ -63,7 +66,8 @@
         app:layout_constraintHorizontal_bias="0.593"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias="0.202"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/WeightText"
@@ -74,7 +78,8 @@
         app:layout_constraintEnd_toStartOf="@+id/WeightNumber"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HeightText" />
+        app:layout_constraintTop_toBottomOf="@+id/HeightText"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/back_button"
@@ -84,6 +89,7 @@
         android:layout_centerHorizontal="true"
         android:text="Back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

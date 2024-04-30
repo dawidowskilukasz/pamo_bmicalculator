@@ -18,7 +18,6 @@ public class Calories extends AppCompatActivity {
     private EditText ageEditText;
     private CheckBox maleCheckBox;
     private CheckBox femaleCheckBox;
-    private Button calculateButton;
     private TextView resultTextView;
 
     @Override
@@ -31,41 +30,25 @@ public class Calories extends AppCompatActivity {
         ageEditText = findViewById(R.id.age_number);
         maleCheckBox = findViewById(R.id.gender_male_checkbox);
         femaleCheckBox = findViewById(R.id.gender_female_checkbox);
-        calculateButton = findViewById(R.id.CalculateButton);
+        Button calculateButton = findViewById(R.id.CalculateButton);
         resultTextView = findViewById(R.id.ResultText);
         Button backButton = findViewById(R.id.back_button);
 
-        maleCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (maleCheckBox.isChecked()) {
-                    femaleCheckBox.setChecked(false);
-                }
+        maleCheckBox.setOnClickListener(v -> {
+            if (maleCheckBox.isChecked()) {
+                femaleCheckBox.setChecked(false);
             }
         });
 
-        femaleCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (femaleCheckBox.isChecked()) {
-                    maleCheckBox.setChecked(false);
-                }
+        femaleCheckBox.setOnClickListener(v -> {
+            if (femaleCheckBox.isChecked()) {
+                maleCheckBox.setChecked(false);
             }
         });
 
-        calculateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculateCalories();
-            }
-        });
+        calculateButton.setOnClickListener(v -> calculateCalories());
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void calculateCalories() {
