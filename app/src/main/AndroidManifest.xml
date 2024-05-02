@@ -25,6 +25,7 @@
         <activity android:name=".BMI" />
         <activity android:name=".Calories" />
         <activity android:name=".Recipe" />
+        <activity android:name=".ToBuy" />
     </application>
 
 </manifest>
