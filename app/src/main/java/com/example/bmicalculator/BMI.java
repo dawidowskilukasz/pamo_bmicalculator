@@ -1,10 +1,16 @@
 package com.example.bmicalculator;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Base64;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import java.util.Locale;
 
 public class BMI extends AppCompatActivity {
@@ -26,6 +32,13 @@ public class BMI extends AppCompatActivity {
         calculateButton.setOnClickListener(v -> calculateAndDisplayBMI());
 
         backButton.setOnClickListener(v -> finish());
+
+        WebView chart = findViewById(R.id.chart_view);
+        WebSettings webSettings = chart.getSettings();
+        (webSettings).setJavaScriptEnabled(true);
+        chart.loadUrl("file:///android_asset/html/chart.html");
+
+
     }
 
     private void calculateAndDisplayBMI() {
@@ -40,4 +53,7 @@ public class BMI extends AppCompatActivity {
             resultText.setText(String.format(Locale.getDefault(), "%.1f", bmi));
         }
     }
+
+
+
 }
